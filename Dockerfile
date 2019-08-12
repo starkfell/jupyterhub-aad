@@ -1,7 +1,7 @@
 # Pulling from the official jupyterhub repo on Docker Hub.
 FROM jupyterhub/jupyterhub:latest
 
-RUN apt-get update && apt-get install -y git curl vim wget python3-pip
+RUN apt-get update && apt-get install -y git curl vim wget jq net-tools python3-pip
 
 RUN pip install oauthenticator PyJWT
 
