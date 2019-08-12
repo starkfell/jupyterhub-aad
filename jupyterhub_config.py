@@ -6,8 +6,8 @@ c.JupyterHub.authenticator_class = AzureAdOAuthenticator
 
 c.Application.log_level = 'DEBUG'
 
-#c.JupyterHub.hub_port = 8000
-c.JupyterHub.port = 443
+c.JupyterHub.hub_port = 8000
+c.JupyterHub.port = 80
 
 c.AzureAdOAuthenticator.tenant_id = os.environ.get('AAD_TENANT_ID')
 c.AzureAdOAuthenticator.oauth_callback_url = os.environ.get('OAUTH_CALLBACK_URL')
