@@ -1,7 +1,13 @@
 # Pulling from the official jupyterhub repo on Docker Hub.
 FROM jupyterhub/jupyterhub:latest
 
-RUN apt-get update && apt-get install -y git curl vim wget jq net-tools python3-pip
+RUN apt-get update && apt-get install -y \
+git curl vim wget jq lsb-release net-tools software-properties-common python3-pip && \
+add-apt-repository -y universe && \
+add-apt-repository ppa:certbot/certbot -y && \
+apt-get update && \
+apt-get install -y certbot
+
 
 RUN pip install oauthenticator PyJWT
 
