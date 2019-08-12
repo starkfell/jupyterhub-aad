@@ -8,7 +8,6 @@ add-apt-repository ppa:certbot/certbot -y && \
 apt-get update && \
 apt-get install -y certbot
 
-
 RUN pip install oauthenticator PyJWT
 
 # Setting up jupyterhub.
