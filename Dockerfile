@@ -16,7 +16,7 @@ EXPOSE 8000
 EXPOSE 443
 
 # Adding in the register-fqdn-with-certbot.sh Script.
-ADD register-fqdn-with-certbot.sh /srv/jupyterhub/register-fqdn-with-certbot.sh
+ADD register-fqdn-with-certbot-and-run-jupyterhub.sh /srv/jupyterhub/register-fqdn-with-certbot-and-run-jupyterhub.sh
 RUN chmod -R 775 /srv/jupyterhub/*.sh
 
 # Adding in the OAuth Configuration.
@@ -24,4 +24,4 @@ ADD jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
 LABEL org.jupyter.service="jupyterhub"
 
-CMD ["/srv/jupyterhub/register-fqdn-with-certbot.sh"]
+CMD ["/srv/jupyterhub/register-fqdn-with-certbot-and-run-jupyterhub.sh"]
