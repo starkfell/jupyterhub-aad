@@ -24,4 +24,4 @@ ADD jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
 LABEL org.jupyter.service="jupyterhub"
 
-CMD ["jupyterhub"]
+CMD ["/srv/jupyterhub/register-fqdn-with-certbot.sh", "sleep 5", "jupyterhub"]
