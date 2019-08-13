@@ -8,7 +8,7 @@ certonly \
 -m $EMAIL_ADDRESS \
 -d $LETS_ENCRYPT_REGISTER_FQDN \
 --agree-tos \
--n
+--quiet
 
 sleep 5
 
