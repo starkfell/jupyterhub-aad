@@ -9,7 +9,7 @@ c.Application.log_level = 'DEBUG'
 c.JupyterHub.hub_port = 8000
 c.JupyterHub.port = 443
 
-c.LetsEncryptRegisterFqdn = os.environ.get('LETS_ENCRYPT_REGISTER_FQDN')
+LetsEncryptRegisterFqdn = os.environ.get('LETS_ENCRYPT_REGISTER_FQDN')
 
 c.JupyterHub.ssl_key = '/etc/letsencrypt/live/{}/privkey.pem'.format(c.LetsEncryptRegisterFqdn)
 c.JupyterHub.ssl_cert = '/etc/letsencrypt/live/{}/fullchain.pem'.format(c.LetsEncryptRegisterFqdn)
