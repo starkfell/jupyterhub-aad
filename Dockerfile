@@ -15,6 +15,10 @@ WORKDIR /srv/jupyterhub
 EXPOSE 8000
 EXPOSE 443
 
+# Adding in the register-fqdn-with-certbot.sh Script.
+ADD register-fqdn-with-certbot.sh /srv/jupyterhub/register-fqdn-with-certbot.sh
+RUN chmod -R 775 /srv/jupyterhub/*.sh
+
 # Adding in the OAuth Configuration.
 ADD jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
