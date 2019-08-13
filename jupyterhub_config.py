@@ -11,8 +11,8 @@ c.JupyterHub.port = 443
 
 LetsEncryptRegisterFqdn = os.environ.get('LETS_ENCRYPT_REGISTER_FQDN')
 
-c.JupyterHub.ssl_key = '/etc/letsencrypt/live/{}/privkey.pem'.format(c.LetsEncryptRegisterFqdn)
-c.JupyterHub.ssl_cert = '/etc/letsencrypt/live/{}/fullchain.pem'.format(c.LetsEncryptRegisterFqdn)
+c.JupyterHub.ssl_key = '/etc/letsencrypt/live/{}/privkey.pem'.format(LetsEncryptRegisterFqdn)
+c.JupyterHub.ssl_cert = '/etc/letsencrypt/live/{}/fullchain.pem'.format(LetsEncryptRegisterFqdn)
 
 c.AzureAdOAuthenticator.tenant_id = os.environ.get('AAD_TENANT_ID')
 c.AzureAdOAuthenticator.oauth_callback_url = os.environ.get('OAUTH_CALLBACK_URL')
